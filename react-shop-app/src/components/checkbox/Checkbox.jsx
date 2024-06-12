@@ -1,8 +1,23 @@
 import React from 'react'
 
-const Checkbox = () => {
+const Checkbox = ({
+  disabled = false,
+  checked = false,
+  label,
+  onChange,
+  ...restProps
+}) => {
   return (
-    <div>Checkbox</div>
+    <label>
+      <input style={{ fontSize: '1.4rem' }}
+        type='checkbox'
+        checked={checked}
+        disabled={disabled}
+        onChange={onChange}
+        {...restProps}
+      />{" "}
+      {label}
+    </label>
   )
 }
 

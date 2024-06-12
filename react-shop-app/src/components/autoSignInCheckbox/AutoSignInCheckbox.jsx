@@ -1,5 +1,5 @@
 import React from 'react'
-import wrapper from './AutoSignInCheckbox.module.scss';
+import { wrapper } from './AutoSignInCheckbox.module.scss';
 import Checkbox from '../checkbox/Checkbox';
 import Tooltip from '../tooltip/Tooltip';
 
@@ -22,7 +22,12 @@ const AutoSignInCheckbox = ({
         {...restProps}
       />
       {checked && (
-        <Tooltip />
+        <Tooltip
+          left={-5}
+          top={24}
+          orientation={orientation}
+          message={message}
+        />
       )}
     </div>
   )

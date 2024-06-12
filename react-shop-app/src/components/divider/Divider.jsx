@@ -1,8 +1,25 @@
 import React from 'react'
+import styles from './Divider.module.scss';
+import classNames from 'classnames';
 
-const Divider = () => {
+const Divider = ({
+  space = 22,
+  color = '#ccc',
+  className = '',
+  ...restProps
+}) => {
+  const style = {
+    marginTop: space,
+    marginBottom: space,
+    background: color,
+  }
   return (
-    <div>Divider</div>
+    <div
+      role="presentation"
+      className={classNames(styles.line, className)}
+      style={style}
+      {...restProps}
+    />
   )
 }
 

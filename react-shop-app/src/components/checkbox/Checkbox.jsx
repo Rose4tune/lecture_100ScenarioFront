@@ -8,8 +8,8 @@ const Checkbox = ({
   ...restProps
 }) => {
   return (
-    <label>
-      <input style={{ fontSize: '1.4rem' }}
+    <label style={{ fontSize: '1.4rem' }}>
+      <input
         type='checkbox'
         checked={checked}
         disabled={disabled}
